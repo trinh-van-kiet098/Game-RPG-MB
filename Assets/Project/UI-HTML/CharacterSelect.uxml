@@ -1,0 +1,65 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <Style src="CharacterSelect.uss" />
+    <ui:VisualElement class="character-select-root">
+        
+        <!-- Tiêu đề màn hình -->
+        <ui:VisualElement class="header-container">
+            <ui:Label text="CHỌN TRANG PHỤC KHỞI ĐẦU" class="screen-title" />
+            <ui:Label text="Tùy chỉnh diện mạo cho nhân vật của bạn trước khi bước vào thế giới" class="screen-subtitle" />
+        </ui:VisualElement>
+
+        <!-- Khu vực chính chia 2 cột -->
+        <ui:VisualElement class="content-container">
+            
+            <!-- Cột trái: Khung xem trước nhân vật (Preview Panel) -->
+            <ui:VisualElement class="preview-panel">
+                <ui:VisualElement name="preview-viewport" class="model-placeholder">
+    </ui:VisualElement>
+                <!-- <ui:VisualElement class="character-stats">
+                    <ui:Label text="Nhân vật: KietTran" class="stat-item" />
+                    <ui:Label text="Lớp nhân vật: Chiến Binh" class="stat-item" />
+                </ui:VisualElement> -->
+            </ui:VisualElement>
+
+            <!-- Cột phải: Lựa chọn Vũ khí & Màu sắc -->
+            <ui:VisualElement class="outfit-list-panel">
+                
+                <!-- 1. PHẦN CHỌN VŨ KHÍ -->
+                <ui:Label text="CHỌN VŨ KHÍ KHỞI ĐẦU" class="panel-title" />
+                
+                <ui:Button name="btn-weapon-sword" class="outfit-card selected">
+                    <ui:VisualElement class="outfit-info">
+                        <ui:Label text="⚔️ Kiếm Dài (GreatSword)" class="outfit-name" />
+                        <ui:Label text="Sát thương diện rộng, tốc độ tấn công trung bình." class="outfit-desc" />
+                    </ui:VisualElement>
+                </ui:Button>
+
+                <ui:Button name="btn-weapon-dual" class="outfit-card">
+                    <ui:VisualElement class="outfit-info">
+                        <ui:Label text="🗡️ Song Đao (Dual Blades)" class="outfit-name" />
+                        <ui:Label text="Tốc độ ra đòn cực nhanh, linh hoạt trong cận chiến." class="outfit-desc" />
+                    </ui:VisualElement>
+                </ui:Button>
+
+
+                <!-- 2. PHẦN CHỌN MÀU SẮC -->
+                <ui:Label text="CHỌN MÀU SẮC NHÂN VẬT" class="panel-title color-title-margin" />
+                
+                <ui:VisualElement class="color-picker-row">
+                    <ui:Button name="btn-color-blue" class="color-btn color-blue selected" />
+                    <ui:Button name="btn-color-red" class="color-btn color-red" />
+                    <ui:Button name="btn-color-green" class="color-btn color-green" />
+                    <ui:Button name="btn-color-gold" class="color-btn color-gold" />
+                </ui:VisualElement>
+
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <!-- Thanh điều hướng dưới cùng (Quay lại & Vào Game) -->
+        <ui:VisualElement class="footer-container">
+            <ui:Button name="btn-back" text="QUAY LẠI" class="rpg-button btn-back" />
+            <ui:Button name="btn-confirm" text="VÀO GAME" class="rpg-button btn-confirm" />
+        </ui:VisualElement>
+
+    </ui:VisualElement>
+</ui:UXML>

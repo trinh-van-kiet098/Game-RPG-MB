@@ -1,0 +1,58 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <Style src="GameHUD.uss" />
+    <ui:VisualElement class="hud-root">
+        
+        <!-- 1. GÓC TRÊN TRÁI: Khung thông tin nhân vật MMO (Avatar, Tên, Thanh HP/MP) -->
+        <ui:VisualElement class="player-status-container">
+            <ui:VisualElement class="player-panel-bg">
+                <ui:VisualElement class="avatar-frame">
+                    <ui:Label text="Lv.50" class="level-text" />
+                </ui:VisualElement>
+                <ui:VisualElement class="bars-container">
+                    <ui:Label text="KietTran" class="player-name" />
+                    <ui:VisualElement class="bar-background hp-bar-bg">
+                        <ui:VisualElement name="hp-fill" class="bar-fill hp-fill" style="width: 85%;" />
+                        <ui:Label text="1850 / 2200" class="bar-text" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="bar-background mp-bar-bg">
+                        <ui:VisualElement name="mp-fill" class="bar-fill mp-fill" style="width: 60%;" />
+                        <ui:Label text="450 / 750" class="bar-text" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <!-- 2. GÓC TRÊN PHẢI: Minimap hình tròn & Thanh công cụ hệ thống -->
+        <ui:VisualElement class="top-right-hud">
+            <ui:VisualElement class="minimap-container">
+                <ui:VisualElement class="minimap-circle">
+                    <ui:Label text="MAP" class="minimap-text" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement class="utility-bar">
+                <ui:Button name="btn-inventory" text="🎒 Túi" class="utility-button" />
+                <ui:Button name="btn-menu" text="⚙ Menu" class="utility-button" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <!-- 3. GÓC DƯỚI TRÁI: Cần điều khiển ảo (Virtual Joystick) -->
+        <ui:VisualElement class="joystick-container">
+            <ui:VisualElement name="joystick-base" class="joystick-base">
+                <ui:VisualElement name="joystick-handle" class="joystick-handle" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <!-- 4. GÓC DƯỚI PHẢI: Cụm nút bấm PS5 (Đã khóa tỉ lệ chuẩn) -->
+        <ui:VisualElement class="bottom-right-container">
+            <ui:VisualElement class="ps5-action-pad">
+                <ui:Button name="btn-triangle" text="△" class="ps-btn triangle" />
+                <ui:VisualElement class="ps5-middle-row">
+                    <ui:Button name="btn-square" text="□" class="ps-btn square" />
+                    <ui:Button name="btn-circle" text="○" class="ps-btn circle" />
+                </ui:VisualElement>
+                <ui:Button name="btn-cross" text="✕" class="ps-btn cross" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+    </ui:VisualElement>
+</ui:UXML>

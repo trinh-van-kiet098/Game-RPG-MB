@@ -1,0 +1,219 @@
+/* Khung nền toàn màn hình phong cách RPG */
+.character-select-root {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 10, 15, 0.92);
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+}
+
+/* Tiêu đề màn hình */
+.header-container {
+    align-items: center;
+    margin-top: 10px;
+}
+
+.screen-title {
+    font-size: 28px;
+    color: rgb(241, 196, 15); /* Màu vàng ánh kim */
+    -unity-font-style: bold;
+    letter-spacing: 2px;
+    margin-bottom: 2px;
+    -unity-text-align: middle-center;
+}
+
+.screen-subtitle {
+    font-size: 13px;
+    color: rgb(189, 195, 199);
+    letter-spacing: 1px;
+    -unity-text-align: middle-center;
+}
+
+/* Khu vực chính chia 2 cột co giãn */
+.content-container {
+    flex-direction: row;
+    width: 85%;
+    max-width: 850px;
+    height: 62%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Cột trái: Khung xem trước nhân vật */
+.preview-panel {
+    width: 44%;
+    height: 100%;
+    background-color: rgba(20, 20, 30, 0.65);
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.model-placeholder {
+    flex-grow: 1;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.preview-text {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.4);
+    -unity-font-style: bold;
+}
+
+.character-stats {
+    width: 100%;
+    background-color: rgba(30, 35, 45, 0.85);
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.stat-item {
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 3px;
+}
+
+/* Cột phải: Danh sách trang phục */
+.outfit-list-panel {
+    width: 52%;
+    height: 100%;
+    justify-content: flex-start;
+}
+
+.panel-title {
+    font-size: 15px;
+    color: rgb(241, 196, 15);
+    -unity-font-style: bold;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+/* Thẻ chọn trang phục (Button dạng card) */
+.outfit-card {
+    width: 100%;
+    height: 58px;
+    background-color: rgba(30, 35, 45, 0.85);
+    border-width: 2px;
+    border-color: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    margin-bottom: 8px;
+    padding: 8px 12px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.outfit-card:hover {
+    background-color: rgba(45, 55, 72, 0.9);
+    border-color: rgb(52, 152, 219);
+    scale: 1.02;
+}
+
+/* Trạng thái khi trang phục đang được chọn */
+.outfit-card.selected {
+    border-color: rgb(241, 196, 15);
+    background-color: rgba(50, 45, 25, 0.9);
+}
+
+.outfit-info {
+    width: 100%;
+}
+
+.outfit-name {
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    -unity-font-style: bold;
+    margin-bottom: 2px;
+}
+
+.outfit-desc {
+    font-size: 11px;
+    color: rgb(189, 195, 199);
+}
+
+/* Thanh điều hướng dưới cùng */
+.footer-container {
+    flex-direction: row;
+    width: 45%;
+    max-width: 400px;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.rpg-button {
+    width: 48%;
+    height: 40px;
+    border-width: 2px;
+    border-radius: 6px;
+    font-size: 14px;
+    -unity-font-style: bold;
+    color: rgb(255, 255, 255);
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-back {
+    background-color: rgb(44, 62, 80);
+    border-color: rgb(127, 140, 141);
+}
+
+.btn-back:hover {
+    background-color: rgb(52, 73, 94);
+}
+
+.btn-confirm {
+    background-color: rgb(39, 174, 96);
+    border-color: rgb(46, 204, 113);
+}
+
+.btn-confirm:hover {
+    background-color: rgb(46, 204, 113);
+}
+
+/* Khoảng cách tiêu đề phần chọn màu */
+.color-title-margin {
+    margin-top: 15px;
+}
+
+/* Hàng chứa các nút chọn màu */
+.color-picker-row {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Kiểu dáng chung cho các nút chọn màu */
+.color-btn {
+    width: 55px;
+    height: 45px;
+    border-radius: 8px;
+    border-width: 2px;
+    border-color: rgba(255, 255, 255, 0.3);
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.color-btn:hover {
+    scale: 1.1;
+    border-color: rgb(255, 255, 255);
+}
+
+.color-btn.selected {
+    border-width: 3px;
+    border-color: rgb(241, 196, 15); /* Viền vàng khi được chọn */
+    scale: 1.05;
+}
+
+/* Màu sắc từng nút */
+.color-blue   { background-color: rgb(52, 152, 219); }
+.color-red    { background-color: rgb(231, 76, 60); }
+.color-green  { background-color: rgb(46, 204, 113); }
+.color-gold   { background-color: rgb(241, 196, 15); }

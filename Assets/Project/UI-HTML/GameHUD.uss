@@ -1,0 +1,224 @@
+/* Tổng thể HUD, cho phép click xuyên qua vùng trống */
+.hud-root {
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 20px;
+    pointer-events: none;
+}
+
+/* Cho phép các cụm điều khiển nhận thao tác chạm/click */
+.player-status-container, .top-right-hud, .joystick-container, .bottom-right-container, .utility-bar, .ps-btn, .utility-button, .joystick-base, .minimap-circle {
+    pointer-events: auto;
+}
+
+/* ================= 1. KHUNG THÔNG TIN NHÂN VẬT (Góc trên trái - Phóng to nhẹ) ================= */
+.player-status-container {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+}
+
+.player-panel-bg {
+    flex-direction: row;
+    background-color: rgba(15, 15, 25, 0.8);
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.25);
+    border-radius: 12px;
+    padding: 10px 14px;
+    align-items: center;
+}
+
+.avatar-frame {
+    width: 52px;
+    height: 52px;
+    background-color: rgb(40, 44, 52);
+    border-radius: 26px;
+    border-width: 2px;
+    border-color: rgb(241, 196, 15);
+    justify-content: center;
+    align-items: center;
+    margin-right: 12px;
+}
+
+.level-text {
+    font-size: 12px;
+    color: rgb(241, 196, 15);
+    -unity-font-style: bold;
+}
+
+.bars-container {
+    width: 170px;
+}
+
+.player-name {
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    -unity-font-style: bold;
+    margin-bottom: 4px;
+}
+
+.bar-background {
+    height: 12px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 4px;
+    justify-content: center;
+}
+
+.hp-bar-bg { border-color: rgba(231, 76, 60, 0.5); border-width: 1px; }
+.mp-bar-bg { border-color: rgba(52, 152, 219, 0.5); border-width: 1px; }
+
+.bar-fill {
+    height: 100%;
+    position: absolute;
+}
+.hp-fill { background-color: rgb(46, 204, 113); }
+.mp-fill { background-color: rgb(52, 152, 219); }
+
+.bar-text {
+    font-size: 10px;
+    color: rgb(255, 255, 255);
+    -unity-text-align: middle-center;
+    position: absolute;
+    width: 100%;
+}
+
+/* ================= 2. GÓC TRÊN PHẢI: MINIMAP TRÒN & MENU (Phóng to nhẹ) ================= */
+.top-right-hud {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    align-items: center;
+}
+
+.minimap-container {
+    width: 115px;
+    height: 115px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.minimap-circle {
+    width: 115px;
+    height: 115px;
+    background-color: rgba(10, 10, 20, 0.85);
+    border-radius: 57.5px;
+    border-width: 3px;
+    border-color: rgb(241, 196, 15);
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.minimap-text {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.6);
+    -unity-font-style: bold;
+    letter-spacing: 1px;
+}
+
+.utility-bar {
+    flex-direction: row;
+}
+
+.utility-button {
+    height: 35px;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-left: 6px;
+    background-color: rgba(30, 35, 45, 0.9);
+    border-color: rgba(255, 255, 255, 0.3);
+    border-width: 1px;
+    border-radius: 7px;
+    color: rgb(255, 255, 255);
+    font-size: 13px;
+    -unity-font-style: bold;
+}
+
+.utility-button:hover {
+    background-color: rgb(52, 152, 219);
+}
+
+/* ================= 3. VIRTUAL JOYSTICK (Dịch xịch vào giữa màn hình hơn & to hơn chút) ================= */
+.joystick-container {
+    position: absolute;
+    bottom: 50px;
+    left: 80px; /* Tăng từ 20px lên 50px để dịch xịch vào trong hơn */
+    width: 200px;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+}
+
+.joystick-base {
+    width: 125px;
+    height: 125px;
+    background-color: rgba(20, 20, 35, 0.45);
+    border-radius: 62.5px;
+    border-width: 2px;
+    border-color: rgba(255, 255, 255, 0.25);
+    justify-content: center;
+    align-items: center;
+}
+
+.joystick-handle {
+    width: 54px;
+    height: 54px;
+    background-color: rgba(255, 255, 255, 0.35);
+    border-radius: 27px;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.7);
+}
+
+/* ================= 4. CỤM NÚT PS5 (Góc dưới phải - Phóng to nhẹ cho dễ bấm) ================= */
+.bottom-right-container {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    align-items: flex-end;
+}
+
+.ps5-action-pad {
+    width: 156px;
+    height: 156px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ps5-middle-row {
+    flex-direction: row;
+    width: 156px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ps-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+    border-width: 2px;
+    font-size: 18px;
+    -unity-font-style: bold;
+    color: rgb(255, 255, 255);
+    background-color: rgba(20, 20, 30, 0.75);
+    justify-content: center;
+    align-items: center;
+    
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+/* Màu sắc đặc trưng PlayStation */
+.ps-btn.triangle { border-color: rgb(0, 210, 160); }   
+.ps-btn.square   { border-color: rgb(255, 110, 180); }  
+.ps-btn.circle   { border-color: rgb(255, 75, 75); }    
+.ps-btn.cross    { border-color: rgb(80, 150, 255); }   
+
+.ps-btn:hover, .ps-btn:active {
+    background-color: rgba(255, 255, 255, 0.35);
+    scale: 1.1;
+}

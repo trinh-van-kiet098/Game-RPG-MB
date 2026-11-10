@@ -1,0 +1,23 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <Style src="MainMenu.uss" />
+    <ui:VisualElement class="main-menu-root">
+        
+        <!-- Tiêu đề game -->
+        <ui:VisualElement class="title-container">
+            <ui:Label text="CHRONICLES OF UNITY" class="game-title" />
+            <ui:Label text="HÀNH TRÌNH HUYỀN THOẠI" class="game-subtitle" />
+        </ui:VisualElement>
+
+        <!-- Khu vực chứa nút bấm -->
+        <ui:VisualElement class="menu-button-container">
+            <ui:Button name="btn-start" text="TIẾP TỤC CHƠI" class="rpg-button" />
+            <ui:Button name="btn-newgame" text="TRÒ CHƠI MỚI" class="rpg-button" />
+            <ui:Button name="btn-settings" text="CÀI ĐẶT" class="rpg-button" />
+            <ui:Button name="btn-exit" text="THOÁT GAME" class="rpg-button btn-exit" />
+        </ui:VisualElement>
+
+        <!-- Phiên bản -->
+        <ui:Label text="v1.0.0 - Alpha Test" class="version-text" />
+
+    </ui:VisualElement>
+</ui:UXML>

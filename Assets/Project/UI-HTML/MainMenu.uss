@@ -1,0 +1,76 @@
+/* Khung nền phủ tối phong cách RPG */
+.main-menu-root {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 10, 15, 0.9);
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px; /* Giảm padding tối đa để tận dụng không gian mobile */
+}
+
+/* Tiêu đề game */
+.title-container {
+    align-items: center;
+    margin-top: 10px;
+}
+
+.game-title {
+    font-size: 28px; /* Thu nhỏ chữ tiêu đề lại cho cân đối */
+    color: rgb(241, 196, 15); /* Màu vàng ánh kim */
+    -unity-font-style: bold;
+    letter-spacing: 2px;
+    margin-bottom: 2px;
+    -unity-text-align: middle-center;
+}
+
+.game-subtitle {
+    font-size: 12px;
+    color: rgb(189, 195, 199);
+    letter-spacing: 1px;
+    -unity-text-align: middle-center;
+}
+
+/* Khu vực chứa nút bấm (Thu nhỏ kích thước khung max-width) */
+.menu-button-container {
+    width: 70%;
+    max-width: 280px; /* Thu nhỏ độ rộng tối đa của cụm nút */
+    align-items: center;
+}
+
+/* Phong cách nút bấm chuẩn RPG (Nhỏ gọn hơn) */
+.rpg-button {
+    width: 100%;
+    height: 38px; /* Giảm chiều cao nút từ 50px xuống 38px */
+    margin-bottom: 8px; /* Giảm khoảng cách giữa các nút */
+    background-color: rgb(44, 62, 80);
+    border-color: rgb(241, 196, 15);
+    border-width: 2px;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    font-size: 14px; /* Thu nhỏ cỡ chữ bên trong nút */
+    -unity-font-style: bold;
+}
+
+/* Hiệu ứng khi rê chuột (Hover) */
+.rpg-button:hover {
+    background-color: rgb(52, 152, 219);
+    border-color: rgb(255, 255, 255);
+    scale: 1.02;
+}
+
+/* Nút thoát đặc biệt */
+.btn-exit {
+    background-color: rgb(120, 40, 31);
+    border-color: rgb(231, 76, 60);
+}
+
+.btn-exit:hover {
+    background-color: rgb(192, 57, 43);
+}
+
+/* Chữ phiên bản góc màn hình */
+.version-text {
+    font-size: 10px;
+    color: rgb(127, 140, 141);
+    margin-bottom: 5px;
+}

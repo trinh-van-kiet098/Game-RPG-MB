@@ -1,7 +1,11 @@
 using System;
 public class XorCipher {
 
+<<<<<<< HEAD
     private byte[] key;
+=======
+    private  byte[] key;
+>>>>>>> 4ee85cb289424c079502c400343c9ade465c1977
     private int curR = 0;
     private int curW = 0;
 
